@@ -26,7 +26,7 @@ export class AuthService extends BaseHttpService {
   }
 
   loginAuth(data:login){
-    return this.http.post(`${this.apiUrL}/auth/login`,data);
+    return this.http.post(`${this.apiUrl}/auth/login`,data);
   }
   logout(){
     this.login.set(false);

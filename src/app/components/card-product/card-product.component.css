@@ -1,15 +1,15 @@
-img.card-img-top.img-fluid{
+img.card-img-top.img-fluid {
     object-fit: contain;
     height: 150px;
     padding: 20px;
-} 
-h5.card-title{
+}
+h5.card-title {
     height: 25px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-p.card-text{
+p.card-text {
     height: 50px;
     overflow: hidden;
     text-overflow: ellipsis;

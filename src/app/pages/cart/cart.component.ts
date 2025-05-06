@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CartStateService } from '../../services/cart-state.service';
+import { CartProductComponent } from "../../components/cart-product/cart-product.component";
 import { ProductItemCart } from '../../interfaces/store.interfaces';
-import { CartProductComponent } from '../../components/card-product/card-product.component';
 
 @Component({
   selector: 'app-cart',
@@ -10,21 +10,23 @@ import { CartProductComponent } from '../../components/card-product/card-product
   styleUrl: './cart.component.css'
 })
 export class CartComponent {
-state = inject(CartStateService).state;
+  state = inject(CartStateService).state;
 
-onRemove(id : number){
-  this.state.remove(id);
-}
-onDecrease(product: ProductItemCart){
-  this.state.update({
-    product : product.product,
-    quantity : product.quantity - 1,
-  });
-}
-onIncrease(product: ProductItemCart){
-  this.state.update({
-    product : product.product,
-    quantity : product.quantity + 1,
+  onRemove(id: number) {
+    this.state.remove(id);
+  }
+  
+  onDecrease(product: ProductItemCart) {
+    this.state.update({
+      product: product.product,
+      quantity: product.quantity - 1,
+    });
+  }
+  
+  onIncrease(product: ProductItemCart) {
+    this.state.update({
+      product: product.product,
+      quantity: product.quantity + 1,
     });
   }
 }

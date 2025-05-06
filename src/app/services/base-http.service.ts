@@ -6,7 +6,6 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class BaseHttpService {
-
   http = inject(HttpClient);
-  apiUrL = environment.API_URL;
+  apiUrl = environment.API_URL;
 }

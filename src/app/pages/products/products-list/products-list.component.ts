@@ -13,16 +13,16 @@ import CardProductComponent from "../../../components/card-product/card-product.
 })
 export default class ProductsListComponent {
   productService = inject(ProductService);
-  products : Product []= [];
+  products: Product[] = [];
 
-  ngOnInit(){
+  ngOnInit() {
     this.getProducts();
   }
 
-  getProducts(){
-    this.productService.getProducts().subscribe((resp)=>{
+  getProducts() {
+    this.productService.getProducts().subscribe((resp) => {
       this.products = resp;
       console.log(this.products);
     });
-    }
   }
+}
